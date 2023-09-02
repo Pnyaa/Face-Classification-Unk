@@ -1,2 +1,12 @@
-# Face-Classification-Unk
-Methodology used to classify face images based on unknown criteria as part of a datachallenge organised at Telecom Paris
+# Face Classification based on Unknown Criteria
+
+## Context of the project
+
+## Dataset
+[CelebA](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html)
+
+## Results
+![](./screenshot_results.jpg)
+
+## Limits / Evolutions
+
