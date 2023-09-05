@@ -43,8 +43,9 @@ Indeed, by observing the learning curves during training, one could notice that 
 * Scheduler **cosine**, with warmup on 5% of steps
 * Batch size 64
 * Early stopping at epoch 8
+* Use of [FFCV-SSL](https://github.com/facebookresearch/FFCV-SSL) to optimize the loading of the data from disk and the application of data augmentations techniques (details in the notebook and [Training script](./scripts/Train.py))
 
-I also spent a lot of time exploring the data to try and understand the unknown criteria, including generating attention maps with a finetuned DINO model (more details in the notebook). <br>
+I also spent a lot of time exploring the data to try and understand the unknown criteria, including generating attention maps with a finetuned DINO model (more details in the notebook), but did not manage to find the exact criterion. The generation of attention maps was nonetheless very interesting ! <br>
 The criterion was revealed at the end of the datachallenge :  it was "blond hair" XOR "wearing glasses", i.e. people either blond or with glasses were of class 1, the others were of class -1. However, the class were assigned programatically without human supervision (impossible to do on such a large dataset), hence many images were actually mislabelled.
 
 ## Results
