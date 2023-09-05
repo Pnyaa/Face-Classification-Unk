@@ -1,6 +1,6 @@
 # Face Classification based on Unknown Criteria
 
-This repository comprises my solution to a datachallenge organised at Telecom Paris at the end of an Advanced Machine Learning course. It contains :
+This repository comprises my solution to a datachallenge organised at Telecom Paris in partnership with Idemia at the end of an Advanced Machine Learning course. It contains :
 * A [jupyter notebook](./Face_Classification_Unk.ipynb) detailing my classification algorithm and the choices taken to develop it (used as a report)
 * [Python scripts](./scripts) used for training the best model, classifying the images and generating the attention maps
 * A [presentation](./Restitution_Datachallenge.pdf) of the approach in PDF format, used to explain my reasoning to the whole promotion at the end of the challenge
@@ -8,7 +8,16 @@ This repository comprises my solution to a datachallenge organised at Telecom Pa
 
 ## Context of the project
 
-[CelebA](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html)
+The task of this datachallenge was a simple binary classification of face images. Two specificities were added to spice it up a little bit :
+* **Unknown criteria** <br>
+The criteria used to assign a label `1` or `-1` to an image was hidden, and not obvious. This, in itself, does not affect the difficulty of training a classifier to solve the task. However, it calls for caution when using data augmentation techniques, as class specific information may be erased or modified in this process. Besides, it also prevents the use of multimodal models such as CLIP or Align, which are strong zero-shot classifiers but require a natural language prompt precisely describing the classes in order to achieve good results.
+* **Gender neutral evaluation metric** <br>
+The evaluation metric is calculated with the following formula, which makes it necessary to obtain a similar accuracy score for men and women in order to be well ranked :
+
+$$ mean(accuracy_{men}, accuracy_{women}) - abs(accuracy_{men} - accuracy_{women})$$
+
+The face images were all extracted from the [CelebA](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html) dataset and programmatically altered (resolution and data augmentation techniques) to produce the train and test datasets. <br>
+The **trainset** consists of **192 577 RGB images** of size 80x80 pixels, the **testset** consists of **10 000 RGB images** of size 80x80 pixels.
 
 ## Key difficulties
 
