@@ -16,4 +16,12 @@ This repository comprises my solution to a datachallenge organised at Telecom Pa
 ![](./images/screenshot_results.jpg)
 
 ## References
-
+1. **DINO** <br>
+Paper : Mathilde Caron & al. *Emerging Properties in Self-Supervised Vision Transformers*, [arXiv:2104.14294](https://arxiv.org/pdf/2104.14294.pdf), April 2021 <br>
+Code : https://github.com/facebookresearch/dino
+2. **SING** <br>
+Paper : Adrien Courtois & al. *SING: A Plug-and-Play DNN Learning Technique*, [arXiv:2305.15997](https://arxiv.org/pdf/2305.15997.pdf), May 2023 <br>
+Code : https://github.com/adriencourtois/sing
+3. **FFCV** <br>
+Paper : Guillaume Leclerc & al. *FFCV: Accelerating Training by Removing Data Bottlenecks*, [arXiv:2306.12517](https://arxiv.org/pdf/2306.12517.pdf), June 2023 <br>
+Code : https://ffcv.io/
